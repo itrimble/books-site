@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://books.remnantsecurity.com/sitemap.xml
