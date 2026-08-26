@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1280" role="img" aria-label="The Unfiltered Future cover">
+  <rect width="800" height="1280" fill="#07080a"/>
+  <rect x="40" y="40" width="720" height="1200" fill="none" stroke="#22d3ee" stroke-opacity=".35" stroke-width="2"/>
+  <text x="80" y="180" fill="#22d3ee" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="600" letter-spacing="6">A TECH THRILLER</text>
+  <text x="80" y="420" fill="#f3f6fc" font-family="-apple-system,system-ui,sans-serif" font-size="72" font-weight="800">THE</text>
+  <text x="80" y="510" fill="#f3f6fc" font-family="-apple-system,system-ui,sans-serif" font-size="72" font-weight="800">UNFILTERED</text>
+  <text x="80" y="600" fill="#22d3ee" font-family="-apple-system,system-ui,sans-serif" font-size="72" font-weight="800">FUTURE</text>
+  <line x1="80" y1="680" x2="280" y2="680" stroke="#22d3ee" stroke-width="4"/>
+  <text x="80" y="1160" fill="#f3f6fc" font-family="-apple-system,system-ui,sans-serif" font-size="28" font-weight="700" letter-spacing="4">IAN TRIMBLE</text>
+</svg>

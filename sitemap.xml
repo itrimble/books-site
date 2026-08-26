@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://books.remnantsecurity.com/</loc><lastmod>2026-08-26</lastmod></url>
-  <url><loc>https://books.remnantsecurity.com/privacy.html</loc><lastmod>2026-08-26</lastmod></url>
-  <url><loc>https://books.remnantsecurity.com/support.html</loc><lastmod>2026-08-26</lastmod></url>
+  <url><loc>https://books.remnantsecurity.com/</loc></url>
+  <url><loc>https://books.remnantsecurity.com/code-red/</loc></url>
+  <url><loc>https://books.remnantsecurity.com/code-red/sample.html</loc></url>
+  <url><loc>https://books.remnantsecurity.com/the-unfiltered-future/</loc></url>
+  <url><loc>https://books.remnantsecurity.com/the-unfiltered-future/sample.html</loc></url>
+  <url><loc>https://books.remnantsecurity.com/max-mercer/</loc></url>
+  <url><loc>https://books.remnantsecurity.com/max-mercer/sample.html</loc></url>
+  <url><loc>https://books.remnantsecurity.com/privacy.html</loc></url>
+  <url><loc>https://books.remnantsecurity.com/support.html</loc></url>
 </urlset>

@@ -4,21 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ian Trimble — books from Remnant Security</title>
-  <meta name="description" content="Author hub for Ian Trimble of Remnant Security Group LLC. Code Red: The Race to Build and Control Artificial Intelligence is listed on Amazon. Based in Louisiana.">
+  <meta name="description" content="Author hub for Ian Trimble. Code Red, The Unfiltered Future, and the Max Mercer series.">
   <link rel="canonical" href="https://books.remnantsecurity.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <style>:root{ --accent: #00C2D8; }</style>
   <style>
-    .card-top { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
-    .card h3 { margin:0; }
-    .card .meta { color:var(--muted); font-size:.9rem; margin:.35em 0 .7em; }
-    .card .actions { margin-top:14px; }
-    .note { color:var(--muted); font-size:.95rem; max-width:62ch; }
-    .draft { margin:18px 0 0; padding:10px 14px; border:1px dashed var(--border); border-radius:10px; color:var(--muted); font-size:.88rem; }
-  </style>
+    .book-grid { display:grid; gap:22px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:22px; }
+    .book-card { display:flex; flex-direction:column; }
+    .book-card .cover { width:100%; aspect-ratio:5/8; object-fit:cover; border-radius:10px; border:1px solid var(--border); background:var(--soft); margin-bottom:14px; }
+    .book-card h3 { font-size:1.15rem; }
+    .book-card .meta { color:var(--muted); font-size:.95rem; margin:.5em 0 .8em; }
+    .book-card .actions { margin-top:auto; }
+    .hero-book { display:grid; gap:36px; grid-template-columns:minmax(180px,280px) 1fr; align-items:center; }
+    .hero-book .cover { width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:var(--shadow); }
+    .sample-prose { max-width:66ch; font-size:1.05rem; }
+    .sample-prose p { margin:0 0 1em; color:var(--text); }
+    .buy-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .price-note { color:var(--muted); font-size:.95rem; margin-top:.6em; }
+    .series-list { margin:12px 0 0; padding-left:18px; color:var(--muted); }
+    @media (max-width:720px){ .hero-book { grid-template-columns:1fr; } .hero-book .cover { max-width:240px; } }
+</style>
   <meta property="og:title" content="Ian Trimble — books from Remnant Security">
-  <meta property="og:description" content="Author hub for Ian Trimble of Remnant Security Group LLC. Code Red is listed on Amazon. Based in Louisiana.">
+  <meta property="og:description" content="Author hub for Ian Trimble. Code Red, The Unfiltered Future, and the Max Mercer series.">
   <meta property="og:image" content="https://books.remnantsecurity.com/og.svg">
   <meta property="og:url" content="https://books.remnantsecurity.com/">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,65 +36,98 @@
     <a class="brand" href="/"><img src="/favicon.svg" alt="">Ian Trimble</a>
     <div class="links">
       <a href="/">Books</a>
+      <a href="/code-red/">Code Red</a>
+      <a href="/the-unfiltered-future/">Unfiltered Future</a>
+      <a href="/max-mercer/">Max Mercer</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/support.html">Support</a>
     </div>
   </div></nav>
-
   <header class="hero"><div class="wrap">
     <span class="eyebrow">Remnant Security Group LLC · Author · Louisiana</span>
-    <h1>Ian Trimble</h1>
-    <p class="lead">Veteran cyber instructor and developer. Neo-noir about the human element of security. Based in Louisiana, he balances securing the digital present and imagining 2043.</p>
+    <h1>Books by Ian Trimble</h1>
+    <p class="lead">Cyber instructor. Nonfiction + neo-noir.</p>
     <div class="actions">
-      <a class="button primary" href="https://www.amazon.com/stores/author/B0BRL7WV64">Amazon author page</a>
-      <a class="button secondary" href="#books">On this site</a>
+      <a class="button primary" href="#books">See the books</a>
+      <a class="button secondary" href="https://www.amazon.com/stores/author/B0BRL7WV64">Amazon author page</a>
     </div>
-    <p class="draft">Draft site. This host is not live. Awaiting Ian approval before a public repo or DNS.</p>
   </div></header>
 
   <section id="books"><div class="wrap">
     <h2>Books</h2>
-    <p class="note">Only titles with a verified Amazon listing are shown. The buy link is the author page until a product URL is provided.</p>
-    <div class="grid" style="margin-top:22px">
+    <div class="book-grid">
 
-      <article class="card">
-        <div class="card-top">
-          <h3>Code Red: The Race to Build and Control Artificial Intelligence</h3>
-          <span class="badge">Listed Mar 18, 2026</span>
-        </div>
-        <p>By Ian Trimble. Amazon currently shows a listing for this title.</p>
-        <p class="meta">Formats seen on Amazon search: Kindle (Kindle Unlimited or $7.99) and paperback $18.99.</p>
+      <article class="card book-card">
+        <img class="cover" src="/code-red/cover.jpg" alt="Code Red cover, by Ian Trimble">
+        <span class="badge">Nonfiction · Amazon</span>
+        <h3>Code Red</h3>
+        <p>The race to build and control artificial intelligence. OpenAI, the boardroom coup, and the trial that followed.</p>
+        <p class="meta">Kindle $7.99 / paperback $18.99</p>
         <div class="actions">
-          <a class="button primary" href="https://www.amazon.com/stores/author/B0BRL7WV64">Find it on the author page</a>
+          <a class="button primary" href="/code-red/">Book page</a>
+          <a class="button secondary" href="https://www.amazon.com/dp/B0GT23T3QN">Amazon Kindle</a>
+        </div>
+      </article>
+
+      <article class="card book-card">
+        <img class="cover" src="/max-mercer/halcyon-key.jpg" alt="The Halcyon Key cover, Max Mercer book 1">
+        <span class="badge">Max Mercer 1 · KU</span>
+        <h3>The Halcyon Key</h3>
+        <p>Neon-noir in Bay Enclave, 2043. A debt-ridden PI, a vanished inventor, and a city that never fully sleeps.</p>
+        <p class="meta">$4.99</p>
+        <div class="actions">
+          <a class="button primary" href="/max-mercer/">Book page</a>
+          <a class="button secondary" href="https://www.amazon.com/dp/B0GKHP37G5">Amazon</a>
+        </div>
+      </article>
+
+      <article class="card book-card">
+        <img class="cover" src="/max-mercer/obsidian-protocol.jpg" alt="The Obsidian Protocol cover, Max Mercer book 2">
+        <span class="badge">Max Mercer 2</span>
+        <h3>The Obsidian Protocol</h3>
+        <p>Six months after destroying the Eidolon Core, a woman with copper hair walks through the door. Her mentor vanished while investigating Project Prometheus.</p>
+        <p class="meta">$4.99</p>
+        <div class="actions">
+          <a class="button primary" href="/max-mercer/">Book page</a>
+          <a class="button secondary" href="https://www.amazon.com/dp/B0GSXRN7CR">Amazon</a>
+        </div>
+      </article>
+
+      <article class="card book-card">
+        <img class="cover" src="/max-mercer/lazarus-directive.jpg" alt="The Lazarus Directive cover, Max Mercer book 3">
+        <span class="badge">Max Mercer 3</span>
+        <h3>The Lazarus Directive</h3>
+        <p>A year after the fall of The Architect, Halcyon Industries promises to bring back your dead. Max Mercer knows better.</p>
+        <p class="meta">$4.99</p>
+        <div class="actions">
+          <a class="button primary" href="/max-mercer/">Book page</a>
+          <a class="button secondary" href="https://www.amazon.com/dp/B0GSXNFTNB">Amazon</a>
+        </div>
+      </article>
+
+      <article class="card book-card">
+        <img class="cover" src="/the-unfiltered-future/cover.svg" alt="The Unfiltered Future cover, by Ian Trimble">
+        <span class="badge">Tech thriller · direct</span>
+        <h3>The Unfiltered Future</h3>
+        <p>The AI doesn’t lie. That’s what makes it dangerous. A journalist opens a dead man’s message and finds a prediction engine that can see what you’ll do next.</p>
+        <p class="meta">$4.99 ebook coming soon</p>
+        <div class="actions">
+          <a class="button primary" href="/the-unfiltered-future/">Book page</a>
+          <a class="button secondary" href="/the-unfiltered-future/sample.html">Read the sample</a>
         </div>
       </article>
 
     </div>
-    <p class="note" style="margin-top:22px">More titles will appear here when they are on the Amazon author page.</p>
   </div></section>
 
   <section><div class="wrap">
     <h2>About the author</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cyber instructor and developer</h3>
-        <p>Ian Trimble is a veteran cyber instructor and developer. Publisher: Remnant Security Group LLC.</p>
-      </div>
-      <div class="card">
-        <h3>Neo-noir, human element</h3>
-        <p>Ian writes neo-noir about the human element of security.</p>
-      </div>
-      <div class="card">
-        <h3>Louisiana · 2043</h3>
-        <p>Based in Louisiana. The author page bio is the source: securing the digital present, imagining 2043.</p>
-      </div>
-    </div>
+    <p class="note">In the rain-soaked streets of the Bay Enclave, the truth is a luxury, but for Ian Trimble, it’s a career. A veteran cyber instructor and developer, he writes neo-noir about the human element of security, and nonfiction about the race to control AI. Based in Louisiana. Publisher: Remnant Security Group LLC.</p>
   </div></section>
-
   <footer class="footer"><div class="wrap">
     © 2026 Remnant Security Group LLC ·
-    <a href="https://apps.remnantsecurity.com">apps.remnantsecurity.com</a>
-    <a href="https://remnantsecurity.com">remnantsecurity.com</a>
+    <a href="https://apps.remnantsecurity.com">Apps</a>
+    <a href="https://www.amazon.com/stores/author/B0BRL7WV64">Amazon</a>
     <a href="/privacy.html">Privacy</a>
     <a href="/support.html">Support</a>
   </div></footer>
