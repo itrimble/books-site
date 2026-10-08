@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1800" viewBox="0 0 1200 1800" role="img" aria-labelledby="title desc">
+  <title id="title">DEAD SIGNAL cover concept</title>
+  <desc id="desc">A dark luxury cruise ship stranded at night under a broken broadcast signal.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#071019"/>
+      <stop offset="0.45" stop-color="#06080d"/>
+      <stop offset="1" stop-color="#020304"/>
+    </linearGradient>
+    <radialGradient id="flare" cx="50%" cy="23%" r="55%">
+      <stop offset="0" stop-color="#43f3ff" stop-opacity="0.22"/>
+      <stop offset="0.46" stop-color="#43f3ff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="noise" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#000"/>
+      <path d="M0 8H100M0 23H100M0 41H100M0 67H100M0 88H100" stroke="#fff" stroke-opacity="0.035"/>
+      <path d="M17 0V100M48 0V100M83 0V100" stroke="#fff" stroke-opacity="0.018"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1800" fill="url(#sea)"/>
+  <rect width="1200" height="1800" fill="url(#flare)"/>
+  <rect width="1200" height="1800" fill="url(#noise)" opacity="0.35"/>
+
+  <g opacity="0.55" stroke="#8ff8ff" stroke-width="5" fill="none" filter="url(#glow)">
+    <path d="M600 190c-86 0-166 34-226 94" opacity="0.22"/>
+    <path d="M600 130c-114 0-220 45-300 125" opacity="0.16"/>
+    <path d="M600 72c-145 0-281 57-383 160" opacity="0.11"/>
+    <path d="M581 212h38v38h-38z" fill="#8ff8ff" opacity="0.9"/>
+    <path d="M520 306l160 0" opacity="0.18"/>
+    <path d="M472 344l256 0" opacity="0.12"/>
+  </g>
+
+  <g transform="translate(88 770)">
+    <path d="M63 365 C245 408 754 406 1003 360 L960 472 C720 531 314 528 90 469 Z" fill="#080a0f" stroke="#d4af37" stroke-opacity="0.32" stroke-width="4"/>
+    <path d="M182 234 H806 C864 234 910 268 935 319 L963 377 C724 416 279 417 93 377 L134 287 C144 255 158 234 182 234Z" fill="#111722" stroke="#9eefff" stroke-opacity="0.25" stroke-width="3"/>
+    <path d="M300 157 H748 C787 157 816 185 826 224 L229 224 C241 184 263 157 300 157Z" fill="#151d2b"/>
+    <path d="M392 84 H680 C707 84 726 104 730 132 L355 132 C361 103 374 84 392 84Z" fill="#151d2b"/>
+    <path d="M508 25 H612 V78 H508Z" fill="#111722"/>
+    <g fill="#ffd36a" opacity="0.82">
+      <rect x="188" y="275" width="35" height="18" rx="3"/><rect x="246" y="275" width="35" height="18" rx="3"/><rect x="304" y="275" width="35" height="18" rx="3"/><rect x="362" y="275" width="35" height="18" rx="3"/>
+      <rect x="455" y="275" width="35" height="18" rx="3"/><rect x="513" y="275" width="35" height="18" rx="3"/><rect x="571" y="275" width="35" height="18" rx="3"/><rect x="629" y="275" width="35" height="18" rx="3"/>
+      <rect x="720" y="275" width="35" height="18" rx="3"/><rect x="778" y="275" width="35" height="18" rx="3"/><rect x="836" y="275" width="35" height="18" rx="3"/>
+    </g>
+    <g fill="#8ff8ff" opacity="0.35">
+      <rect x="314" y="181" width="44" height="18" rx="3"/><rect x="386" y="181" width="44" height="18" rx="3"/><rect x="458" y="181" width="44" height="18" rx="3"/><rect x="530" y="181" width="44" height="18" rx="3"/><rect x="602" y="181" width="44" height="18" rx="3"/><rect x="674" y="181" width="44" height="18" rx="3"/>
+    </g>
+    <path d="M30 497 C210 462 322 546 509 508 C681 473 790 437 1032 491" stroke="#39e7f5" stroke-opacity="0.26" stroke-width="8" fill="none"/>
+    <path d="M0 548 C230 510 369 603 557 559 C753 513 859 498 1080 548" stroke="#39e7f5" stroke-opacity="0.14" stroke-width="5" fill="none"/>
+  </g>
+
+  <text x="600" y="525" text-anchor="middle" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="178" letter-spacing="8" fill="#f5f1e8">DEAD</text>
+  <text x="600" y="685" text-anchor="middle" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="158" letter-spacing="7" fill="#d4af37">SIGNAL</text>
+  <text x="600" y="736" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="31" letter-spacing="6" fill="#8ff8ff">A NOVEL</text>
+  <text x="600" y="1542" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="37" letter-spacing="4" fill="#f5f1e8">1,200 PASSENGERS · NO SIGNAL · NO SHORE · NO RULES</text>
+  <text x="600" y="1648" text-anchor="middle" font-family="Georgia, serif" font-size="50" letter-spacing="3" fill="#d4af37">IAN TRIMBLE</text>
+</svg>

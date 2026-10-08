@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Fucking Nonsense — Wrong About Everything — Ian Trimble</title>
+    <meta name="description" content="Thirty days. One dying government. One jaded Treasury lifer. And a thirteen-year-old survey that proves the British public are spectacularly wrong about where their taxes go.">
+    <meta name="author" content="Ian Trimble">
+    <meta property="og:title" content="Government Fucking Nonsense — Wrong About Everything">
+    <meta property="og:description" content="Thirty days. One dying government. One jaded Treasury lifer. And a thirteen-year-old survey that proves the British public are spectacularly wrong about where their taxes go.">
+    <meta property="og:image" content="cover.png">
+    <meta property="og:type" content="book">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #07080a;
+            --bg-card: #0f1115;
+            --bg-card-hover: #161921;
+            --accent: #ef4444;
+            --accent-glow: rgba(239, 68, 68, 0.15);
+            --accent-dim: #991b1b;
+            --blue: #3b82f6;
+            --cyan: #22d3ee;
+            --text: #e8eaed;
+            --text-dim: #8b8fa3;
+            --text-faint: #4b5068;
+            --border: #1e2130;
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(7, 8, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            height: 64px;
+        }
+        .nav-brand {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500; font-size: 0.85rem; color: var(--accent);
+            letter-spacing: 0.15em; text-transform: uppercase;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            color: var(--text-dim); text-decoration: none; font-size: 0.85rem;
+            font-weight: 500; letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: var(--accent); color: white !important;
+            padding: 8px 20px; border-radius: 6px; font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: #dc2626; transform: translateY(-1px); }
+
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-dim); margin: 5px 0; transition: 0.3s; }
+
+        /* ─── HERO ─── */
+        .hero {
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 40%, rgba(239,68,68,0.06), transparent),
+                radial-gradient(ellipse 60% 50% at 80% 30%, rgba(59,130,246,0.04), transparent);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+        }
+        .hero-text { max-width: 600px; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(239,68,68,0.2);
+            padding: 6px 16px; border-radius: 100px;
+            font-size: 0.78rem; font-weight: 600; color: var(--accent);
+            letter-spacing: 0.04em; text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem; font-weight: 900; line-height: 1.08;
+            margin-bottom: 12px;
+        }
+        .hero h1 em {
+            font-style: italic; color: var(--accent);
+        }
+        .hero-subtitle {
+            font-size: 1.15rem; color: var(--text-dim);
+            font-weight: 400; margin-bottom: 16px;
+        }
+        .hero-tagline {
+            font-size: 0.95rem; color: var(--text-faint);
+            line-height: 1.8; margin-bottom: 36px;
+            max-width: 520px;
+        }
+        .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 8px;
+            font-size: 0.95rem; font-weight: 600; text-decoration: none;
+            transition: all 0.25s; cursor: pointer; border: none;
+        }
+        .btn-red { background: var(--accent); color: white; }
+        .btn-red:hover { background: #dc2626; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(239,68,68,0.3); }
+        .btn-outline {
+            background: transparent; color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-outline:hover { border-color: var(--text-dim); background: var(--bg-card); }
+
+        .hero-cover {
+            position: relative;
+        }
+        .hero-cover img {
+            width: 100%; border-radius: var(--radius);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.6), 0 0 60px rgba(239,68,68,0.08);
+        }
+        .hero-cover::after {
+            content: '';
+            position: absolute; bottom: -20px; left: 10%; right: 10%; height: 40px;
+            background: rgba(239,68,68,0.1); filter: blur(30px); border-radius: 50%;
+        }
+
+        /* ─── STATS BAR ─── */
+        .stats-bar {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+            text-align: center;
+        }
+        .stat-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem; font-weight: 700; color: var(--accent);
+        }
+        .stat-label { font-size: 0.82rem; color: var(--text-dim); margin-top: 4px; font-weight: 500; }
+
+        /* ─── SECTIONS ─── */
+        section { padding: 100px 0; }
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem; color: var(--accent); letter-spacing: 0.2em;
+            text-transform: uppercase; margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .section-desc {
+            font-size: 1.05rem; color: var(--text-dim); max-width: 560px;
+            margin-bottom: 48px;
+        }
+
+        /* ─── PREMISE ─── */
+        .premise {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .premise-content {
+            max-width: 720px; margin: 0 auto; text-align: center;
+        }
+        .premise-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem; font-style: italic; line-height: 1.6;
+            color: var(--text); margin-bottom: 20px;
+        }
+        .premise-attr {
+            font-size: 0.85rem; color: var(--text-faint);
+        }
+
+        /* ─── CHAPTERS ─── */
+        .chapters-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .chapter-item {
+            display: flex; align-items: flex-start; gap: 16px;
+            padding: 20px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .chapter-item:hover { border-color: var(--accent-dim); background: var(--bg-card-hover); }
+        .chapter-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem; font-weight: 600; color: var(--accent);
+            min-width: 28px; padding-top: 2px;
+        }
+        .chapter-title {
+            font-weight: 600; font-size: 0.95rem; margin-bottom: 3px;
+        }
+        .chapter-sub {
+            font-size: 0.82rem; color: var(--text-dim); line-height: 1.5;
+        }
+        .chapter-special {
+            border-color: var(--accent-dim);
+            background: linear-gradient(135deg, var(--bg-card), rgba(239,68,68,0.03));
+        }
+
+        /* ─── FEATURES ─── */
+        .features-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .feature-card {
+            padding: 32px 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .feature-card:hover { border-color: var(--accent-dim); transform: translateY(-4px); }
+        .feature-icon {
+            font-size: 1.8rem; margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;
+        }
+        .feature-card p {
+            font-size: 0.88rem; color: var(--text-dim); line-height: 1.7;
+        }
+
+        /* ─── ABOUT ─── */
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;
+        }
+        .about-bio h3 { font-size: 1.4rem; margin-bottom: 16px; }
+        .about-bio p { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 16px; }
+        .about-creds {
+            display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px;
+        }
+        .cred-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem; padding: 6px 14px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 6px; color: var(--text-dim); letter-spacing: 0.04em;
+        }
+
+        /* ─── CTA ─── */
+        .cta-section {
+            background: linear-gradient(135deg, #1a0505, var(--bg-dark));
+            border-top: 1px solid var(--accent-dim);
+            text-align: center;
+        }
+        .cta-section .section-title { max-width: 600px; margin: 0 auto 16px; }
+        .cta-section .section-desc { max-width: 500px; margin: 0 auto 40px; }
+        .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* ─── FOOTER ─── */
+        footer {
+            padding: 48px 0 32px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-copy { font-size: 0.82rem; color: var(--text-faint); }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { font-size: 0.82rem; color: var(--text-dim); text-decoration: none; }
+        .footer-links a:hover { color: var(--text); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+            .hero-text { max-width: 100%; }
+            .hero-tagline { max-width: 100%; margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-cover { max-width: 280px; margin: 0 auto; }
+            .hero h1 { font-size: 2.4rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .chapters-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .nav-links.open {
+                display: flex; flex-direction: column;
+                position: absolute; top: 64px; left: 0; right: 0;
+                background: var(--bg-dark); border-bottom: 1px solid var(--border);
+                padding: 24px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.9rem; }
+            .section-title { font-size: 2rem; }
+            .premise-quote { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-brand">GFN</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#chapters">Chapters</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#buy" class="nav-cta">Get the Book</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="hero-badge">Available Now</div>
+                <h1>Government <em>Fucking Nonsense</em></h1>
+                <p class="hero-subtitle">Wrong About Everything</p>
+                <p class="hero-tagline">
+                    Dr Elias 'Swanny' Crowe has spent thirty-one years keeping the Treasury afloat and hating every second of it. Then, at 3 a.m., he stumbles on a podcast that changes everything. The British public are thicker than pigshit about where their taxes go.
+                </p>
+                <p class="hero-tagline" style="margin-top: -20px;">
+                    <strong style="color: var(--text);">Thirty days. One operation. Zero honesty.</strong> What follows is one savage month in the life of a dying Labour government that decides to weaponise the public's ignorance instead of fixing it.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#buy" class="btn btn-red">Get the Book &rarr;</a>
+                    <a href="#chapters" class="btn btn-outline">See the Chapters</a>
+                </div>
+            </div>
+            <div class="hero-cover">
+                <img src="cover.png" alt="Government Fucking Nonsense book cover" width="380" height="566">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-num">30</div>
+                <div class="stat-label">Days Until the Vote</div>
+            </div>
+            <div>
+                <div class="stat-num">0.7%</div>
+                <div class="stat-label">Actual Benefit Fraud Rate</div>
+            </div>
+            <div>
+                <div class="stat-num">24%</div>
+                <div class="stat-label">What the Public Think</div>
+            </div>
+            <div>
+                <div class="stat-num">3</div>
+                <div class="stat-label">Vote Margin of Survival</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PREMISE -->
+<section class="premise">
+    <div class="container">
+        <div class="premise-content">
+            <div class="section-label">The Premise</div>
+            <p class="premise-quote">
+                "We don't fix the books, Reggie. We fix the fucking story."
+            </p>
+            <p class="premise-attr">&mdash; From the Prologue</p>
+        </div>
+    </div>
+</section>
+
+<!-- CHAPTERS -->
+<section id="chapters">
+    <div class="container">
+        <div class="section-label">Inside the Book</div>
+        <h2 class="section-title">Prologue + 30 Chapters + Epilogue</h2>
+        <p class="section-desc">Thirty days of political warfare, public deception, and institutional rot &mdash; told chapter by chapter as the clock runs down to a vote that will decide everything.</p>
+
+        <div class="chapters-grid">
+            <div class="chapter-item chapter-special">
+                <span class="chapter-num">PRO</span>
+                <div>
+                    <div class="chapter-title">"The Shed at 3 a.m."</div>
+                    <div class="chapter-sub">A podcast. A pencil knife. A very bad idea.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">01</span>
+                <div>
+                    <div class="chapter-title">"The Pitch"</div>
+                    <div class="chapter-sub">6 a.m. in the Cabinet Room. The numbers are devastating.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">02</span>
+                <div>
+                    <div class="chapter-title">"Launch"</div>
+                    <div class="chapter-sub">Press conference. Letter opener. Real cuts hidden in the filing cabinet.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">03</span>
+                <div>
+                    <div class="chapter-title">"First Bloodbath"</div>
+                    <div class="chapter-sub">The Guardian exposes the truth. The polls go up.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">04</span>
+                <div>
+                    <div class="chapter-title">"Council Collapse"</div>
+                    <div class="chapter-sub">A plumber with a printout ambushes the PM on live TV.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">05</span>
+                <div>
+                    <div class="chapter-title">"Tearoom Treachery"</div>
+                    <div class="chapter-sub">The Health Secretary meets the enemy for tea.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">06</span>
+                <div>
+                    <div class="chapter-title">"Media Honeymoon"</div>
+                    <div class="chapter-sub">Saturday. The Sun. Strategic cultivation.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">07</span>
+                <div>
+                    <div class="chapter-title">"Week 1 Climax"</div>
+                    <div class="chapter-sub">Midnight call. The whistleblower has the real numbers.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">08</span>
+                <div>
+                    <div class="chapter-title">"Dawn Raids Begin"</div>
+                    <div class="chapter-sub">Cameras. Crying mothers. Forty-seven pounds.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">09</span>
+                <div>
+                    <div class="chapter-title">"Donor Scandal"</div>
+                    <div class="chapter-sub">A phone call that shouldn't have happened.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">10</span>
+                <div>
+                    <div class="chapter-title">"Cabinet Cage Match"</div>
+                    <div class="chapter-sub">You're not warning us. You're auditioning.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">11</span>
+                <div>
+                    <div class="chapter-title">"Poll Reversal"</div>
+                    <div class="chapter-sub">Plus seventeen. Minus twenty-three. The scissors open.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">12</span>
+                <div>
+                    <div class="chapter-title">"Tearoom Betrayal"</div>
+                    <div class="chapter-sub">She offered survival. He said no.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">13</span>
+                <div>
+                    <div class="chapter-title">"God-Daughter Warning"</div>
+                    <div class="chapter-sub">The shed. The oak coffin. The truth.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">14</span>
+                <div>
+                    <div class="chapter-title">"Leak Day"</div>
+                    <div class="chapter-sub">The truth immunises the government.</div>
+                </div>
+            </div>
+            <div class="chapter-item">
+                <span class="chapter-num">15</span>
+                <div>
+                    <div class="chapter-title">"Mid-Month Crisis"</div>
+                    <div class="chapter-sub">Doris. Sixteen degrees. Eight hundred million.</div>
+                </div>
+            </div>
+            <div class="chapter-item chapter-special">
+                <span class="chapter-num">EPI</span>
+                <div>
+                    <div class="chapter-title">"The Morning After"</div>
+                    <div class="chapter-sub">A new podcast. A new set of wrong numbers.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+        <div class="section-label">What Makes This Different</div>
+        <h2 class="section-title">Political satire with receipts.</h2>
+        <p class="section-desc">A savage fictional comedy built on real government data. Every statistic in this book comes from actual surveys &mdash; and the truth is worse than anything the characters invent.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#127963;&#65039;</div>
+                <h3>Thick of It Meets 24</h3>
+                <p>Rapid-fire COBRA bloodbaths with a ticking clock.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128202;</div>
+                <h3>Built on Real Data</h3>
+                <p>Every statistic comes from actual government surveys.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128481;&#65039;</div>
+                <h3>Zero Redemption</h3>
+                <p>No heroes. No lessons learned. Just the hollow laugh.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128241;</div>
+                <h3>Reform UK Subplot</h3>
+                <p>The populist party that makes everything worse by being right.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#9749;</div>
+                <h3>British to the Bone</h3>
+                <p>Proper swearing, proper slang, proper political filth.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128240;</div>
+                <h3>The Receipts</h3>
+                <p>Endnotes proving the real numbers are worse than the fiction.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div>
+                <div class="section-label">About the Author</div>
+                <h2 class="section-title">Ian Trimble</h2>
+            </div>
+            <div class="about-bio">
+                <p>Ian Trimble writes fiction and nonfiction about the places where technology, politics, and human stupidity collide. His previous books include the Max Mercer Mystery Series (<em>The Halcyon Key</em>, <em>The Obsidian Protocol</em>, <em>The Lazarus Directive</em>).</p>
+                <div class="about-creds">
+                    <span class="cred-tag">Political Satire</span>
+                    <span class="cred-tag">British Fiction</span>
+                    <span class="cred-tag">Dark Comedy</span>
+                    <span class="cred-tag">Self-Published</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="buy" class="cta-section">
+    <div class="container">
+        <div class="section-label">Get the Book</div>
+        <h2 class="section-title">Thirty days. One dying government. Zero honesty.</h2>
+        <p class="section-desc">Thirty days. One dying government. One jaded Treasury lifer. And a thirteen-year-old survey that proves the British public are spectacularly wrong about where their taxes go.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-red">Kindle Edition &mdash; $4.99</a>
+            <a href="#" class="btn btn-outline">Paperback &mdash; $14.99</a>
+        </div>
+        <p style="color: var(--text-faint); font-size: 0.82rem; margin-top: 20px;">Available on Amazon Kindle and in paperback.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-copy">&copy; 2026 Ian Trimble. Published by Remnant Security LLC.</div>
+            <div class="footer-links">
+                <a href="#">Amazon</a>
+                <a href="#about">About the Author</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Subtle scroll animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.chapter-item, .feature-card, .stat-num').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+});
+
+// Animate stats counting
+function animateValue(el, end, duration) {
+    const text = el.textContent;
+    const isPrefix = text.startsWith('$');
+    const suffix = text.includes('%') ? '%' : '';
+    const numStr = text.replace(/[^0-9.]/g, '');
+    const target = parseFloat(numStr);
+    if (isNaN(target)) return;
+
+    let start = 0;
+    const startTime = performance.now();
+    function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = start + (target - start) * eased;
+        const formatted = target % 1 !== 0 ? current.toFixed(1) : Math.round(current).toLocaleString();
+        el.textContent = (isPrefix ? '$' : '') + formatted + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting && !e.target.dataset.animated) {
+            e.target.dataset.animated = 'true';
+            animateValue(e.target, 0, 1200);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-num').forEach(el => statsObserver.observe(el));
+</script>
+
+</body>
+</html>
