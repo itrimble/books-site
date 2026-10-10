@@ -1,0 +1,52 @@
+/* /read/ sample reader — shared by every /read/<slug>/ page. Uses the site tokens from /styles.css.
+   The site has no dark theme, so the reader stays light to match it. */
+.read-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60;
+  background: transparent; pointer-events: none;
+}
+.read-progress span {
+  display: block; height: 100%; width: 0;
+  background: var(--action); transition: width .08s linear;
+}
+.read-head { padding: clamp(32px, 6vw, 72px) 0 12px; }
+.read-head .wrap, .read-body .wrap, .read-end .wrap { max-width: calc(65ch + 44px); }
+.read-book {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 22px; color: var(--ink);
+}
+.read-book:hover { text-decoration: none; }
+.read-book img { width: 64px; border-radius: 6px; box-shadow: var(--shadow-cover); background: var(--panel); }
+.read-book .t { font-family: var(--display); font-weight: 800; letter-spacing: -.02em; display: block; }
+.read-book .a { color: var(--muted); font-size: .9rem; }
+.read-head h1 { font-size: clamp(1.9rem, 4.2vw, 2.8rem); }
+.read-body { padding-top: 8px; }
+.read-prose {
+  max-width: 65ch;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  font-size: clamp(1.08rem, 1.1rem + .2vw, 1.22rem);
+  line-height: 1.75; color: var(--ink);
+  hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty;
+}
+.read-prose p { margin: 0 0 1.1em; }
+.read-prose h2 {
+  font-family: var(--display); font-size: 1.35rem; margin: 2.2em 0 .9em;
+}
+.read-prose h2:first-child { margin-top: 0; }
+.read-end-marker { height: 1px; }
+.read-end { padding-top: 12px; }
+.buy-box {
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 26px; display: grid; gap: 20px; grid-template-columns: 96px 1fr; align-items: start;
+}
+.buy-box img { width: 96px; border-radius: 8px; box-shadow: var(--shadow-cover); }
+.buy-box h2 { font-size: 1.35rem; margin-bottom: .3em; }
+.buy-box p { color: var(--muted); margin-bottom: .9em; }
+.buy-box .ku { color: var(--ink); font-weight: 600; }
+.read-next { margin-top: 18px; }
+.read-next .card { display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: start; }
+.read-next img { width: 72px; border-radius: 6px; box-shadow: var(--shadow-cover); }
+.read-next .order-num { font-family: var(--display); font-weight: 800; font-size: .8rem; letter-spacing: .14em; color: var(--fiction); margin-bottom: 6px; }
+@media (max-width: 560px) {
+  .buy-box, .read-next .card { grid-template-columns: 1fr; }
+  .buy-box img { width: 88px; }
+}
+@media (prefers-reduced-motion: reduce) { .read-progress span { transition: none; } }

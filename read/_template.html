@@ -1,0 +1,124 @@
+<!doctype html>
+<!--
+  /read/ SAMPLE READER TEMPLATE — copy this file to /read/<slug>/index.html and replace every {{FIELD}}.
+  (Files starting with "_" are not published by GitHub Pages/Jekyll, so this template never goes live.)
+  Fields:
+    {{TITLE}}            Book title, e.g. The Obsidian Protocol
+    {{SLUG}}             URL slug, e.g. the-obsidian-protocol  -> https://books.remnantsecurity.com/read/{{SLUG}}/
+    {{BOOK_URL}}         The book's own page on this site, e.g. /max-mercer/
+    {{COVER}}            Cover path on this site, e.g. /max-mercer/obsidian-protocol.svg
+    {{OG_IMAGE}}         Absolute URL of a 1200x630 PNG/JPG if one exists, else the absolute cover URL
+    {{DESCRIPTION}}      One-line meta description
+    {{SERIES_LINE}}      Small line under the title, e.g. "Max Mercer · Book 2" (or "Ian Trimble")
+    {{EYEBROW}}          e.g. "Sample · The Obsidian Protocol"
+    {{CHAPTER_HEADING}}  Main heading, e.g. "Chapter 1: ..."
+    {{CHAPTER_LEAD}}     Optional one-line lead under the heading (delete the <p class="lead"> if none)
+    {{PROSE}}            APPROVED sample text only: <p>…</p> paragraphs, <h2> for extra chapter headings
+    {{AMAZON_URL}}       Amazon URL already used on the site (primary buy button, data-store="amazon")
+    {{GUMROAD_URL}}      Only for Obsidian (https://remnantsecurity.gumroad.com/l/dafhqy) and Lazarus (https://remnantsecurity.gumroad.com/l/zxega); otherwise delete that <a>
+    {{KU_LINE}}          Only if the site already states the book is in Kindle Unlimited; otherwise delete the <p class="ku">
+    NEXT BOOK            Fill or delete the whole <section class="read-next"> block ({{NEXT_*}} fields)
+  Then: add <url><loc>https://books.remnantsecurity.com/read/{{SLUG}}/</loc></url> to /sitemap.xml
+        and point the book page's "Read a sample" button at /read/{{SLUG}}/.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{EYEBROW}} — {{CHAPTER_HEADING}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <link rel="canonical" href="https://books.remnantsecurity.com/read/{{SLUG}}/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/read/reader.css">
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="{{EYEBROW}} — {{CHAPTER_HEADING}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="{{OG_IMAGE}}">
+  <meta property="og:url" content="https://books.remnantsecurity.com/read/{{SLUG}}/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{EYEBROW}} — {{CHAPTER_HEADING}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="{{OG_IMAGE}}">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Book","name":"{{TITLE}}","author":{"@type":"Person","name":"Ian Trimble","url":"https://books.remnantsecurity.com/about.html"},"url":"https://books.remnantsecurity.com{{BOOK_URL}}","image":"https://books.remnantsecurity.com{{COVER}}","publisher":{"@type":"Organization","name":"Remnant Security Group LLC"},"workExample":{"@type":"Book","bookFormat":"https://schema.org/EBook","url":"{{AMAZON_URL}}"},"subjectOf":{"@type":"WebPage","name":"{{EYEBROW}}","url":"https://books.remnantsecurity.com/read/{{SLUG}}/"}}
+  </script>
+</head>
+<body data-read-title="{{TITLE}}" data-read-slug="{{SLUG}}">
+  <div class="read-progress" data-read-progress aria-hidden="true"><span></span></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="nav"><div class="nav-inner">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="">Ian Trimble</a>
+    <div class="links">
+      <a href="/">Books</a>
+      <a href="/max-mercer/">Max Mercer</a>
+      <a href="/code-red/">Code Red</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div></nav>
+  <header class="read-head" id="main"><div class="wrap">
+    <a class="read-book" href="{{BOOK_URL}}"><img src="{{COVER}}" alt="{{TITLE}} cover" width="64"><span><span class="t">{{TITLE}}</span><span class="a">{{SERIES_LINE}}</span></span></a>
+    <span class="eyebrow">{{EYEBROW}}</span>
+    <h1>{{CHAPTER_HEADING}}</h1>
+    <p class="lead">{{CHAPTER_LEAD}}</p>
+  </div></header>
+  <section class="read-body"><div class="wrap">
+    <article class="read-prose" data-read-prose>
+{{PROSE}}
+    </article>
+    <div class="read-end-marker" aria-hidden="true"></div>
+  </div></section>
+  <section class="read-end" id="end"><div class="wrap">
+    <aside class="buy-box" aria-label="Keep reading {{TITLE}}">
+      <img src="{{COVER}}" alt="" width="96">
+      <div>
+        <p class="section-kicker">End of sample</p>
+        <h2>Keep reading {{TITLE}}</h2>
+        <p class="ku">{{KU_LINE}}</p>
+        <div class="actions">
+          <a class="button primary" href="{{AMAZON_URL}}" data-store="amazon">Buy on Amazon</a>
+          <a class="button secondary" href="{{GUMROAD_URL}}" data-store="gumroad">EPUB + PDF on Gumroad</a>
+          <a class="button linkish" href="{{BOOK_URL}}">Back to the book</a>
+        </div>
+      </div>
+    </aside>
+    <section class="read-next" style="padding:0"><div class="card">
+      <img src="{{NEXT_COVER}}" alt="{{NEXT_TITLE}} cover" width="72">
+      <div>
+        <div class="order-num">NEXT IN THE SERIES</div>
+        <h3>{{NEXT_TITLE}}</h3>
+        <p>{{NEXT_BLURB}}</p>
+        <div class="actions">
+          <a class="button primary" href="{{NEXT_AMAZON_URL}}" data-store="amazon" data-book="{{NEXT_TITLE}}">Buy on Amazon</a>
+          <a class="button linkish" href="{{NEXT_URL}}">More about {{NEXT_TITLE}}</a>
+        </div>
+      </div>
+    </div></section>
+    <!-- EMAIL SIGNUP PLACEHOLDER — keep commented out until the ConvertKit key is rotated and a public form is set up.
+    <section class="email-strip"><div class="card">
+      <h3>Get the next chapter by email</h3>
+      <form data-convertkit-form="REPLACE_WITH_PUBLIC_FORM_ID"> ... </form>
+    </div></section>
+    -->
+  </div></section>
+  <footer class="footer"><div class="wrap">
+    <div class="foot-nav">
+      <a href="/">Books</a>
+      <a href="/max-mercer/">Max Mercer</a>
+      <a href="/code-red/">Code Red</a>
+      <a href="/the-unfiltered-future/">Unfiltered Future</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+    © 2026 Remnant Security Group LLC ·
+    <a href="https://www.amazon.com/stores/author/B0BRL7WV64">Amazon</a>
+    <a href="mailto:hello@remnantsecurity.com">hello@remnantsecurity.com</a>
+  </div></footer>
+  <script src="/posthog.js"></script>
+  <script src="/read/reader.js" defer></script>
+</body>
+</html>
