@@ -18,7 +18,7 @@ Author hub for **Ian Trimble** / Remnant Security Group LLC.
 
 - Author page: https://www.amazon.com/stores/author/B0BRL7WV64
 - One title: *Code Red: The Race to Build and Control Artificial Intelligence* (listed Mar 18, 2026). Buy CTA is the author page until a product URL is provided.
-- Support: support@remnantsecurity.com
+- Support: iantrimble@remnantsecurity.com
 - Privacy: this marketing site collects no analytics in v1
 
 ## Shared kit
