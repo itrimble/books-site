@@ -50,3 +50,6 @@
   .buy-box img { width: 88px; }
 }
 @media (prefers-reduced-motion: reduce) { .read-progress span { transition: none; } }
+.read-prose hr.scene-break { border: 0; text-align: center; margin: 2em 0; }
+.read-prose hr.scene-break::after { content: "* * *"; letter-spacing: .5em; color: var(--muted, #6b7280); }
+.read-prose blockquote { margin: 1.4em 0; padding-left: 1em; border-left: 3px solid var(--border, #e5e7eb); font-style: italic; }
