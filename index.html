@@ -16,6 +16,68 @@
   <meta property="og:image" content="https://books.remnantsecurity.com/code-red/cover.svg">
   <meta property="og:url" content="https://books.remnantsecurity.com/">
   <meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "name": "Ian Trimble",
+   "url": "https://books.remnantsecurity.com/about.html",
+   "sameAs": [
+    "https://www.amazon.com/stores/author/B0BRL7WV64",
+    "https://www.linkedin.com/in/itrimble/",
+    "https://sessionize.com/ian-trimble/"
+   ],
+   "@id": "https://books.remnantsecurity.com/#author",
+   "image": "https://books.remnantsecurity.com/images/ian-trimble-960.jpg",
+   "jobTitle": "Insider Threat Manager",
+   "worksFor": {
+    "@type": "Organization",
+    "name": "Google"
+   }
+  },
+  {
+   "@type": "BookSeries",
+   "@id": "https://books.remnantsecurity.com/max-mercer/#series",
+   "name": "Max Mercer",
+   "url": "https://books.remnantsecurity.com/max-mercer/",
+   "author": {
+    "@type": "Person",
+    "name": "Ian Trimble",
+    "url": "https://books.remnantsecurity.com/about.html",
+    "sameAs": [
+     "https://www.amazon.com/stores/author/B0BRL7WV64",
+     "https://www.linkedin.com/in/itrimble/",
+     "https://sessionize.com/ian-trimble/"
+    ]
+   },
+   "hasPart": [
+    {
+     "@type": "Book",
+     "name": "The Halcyon Key",
+     "position": 1,
+     "url": "https://www.amazon.com/dp/B0GKHP37G5"
+    },
+    {
+     "@type": "Book",
+     "name": "The Obsidian Protocol",
+     "position": 2,
+     "url": "https://www.amazon.com/dp/B0GSXRN7CR"
+    },
+    {
+     "@type": "Book",
+     "name": "The Lazarus Directive",
+     "position": 3,
+     "url": "https://www.amazon.com/dp/B0GSXNFTNB"
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -46,6 +108,29 @@
       </div>
     </div>
   </div></header>
+
+  <section class="author-top" aria-labelledby="author-title"><div class="wrap">
+    <div class="author-block">
+      <picture>
+        <source type="image/webp" srcset="/images/ian-trimble-480.webp 480w, /images/ian-trimble-960.webp 960w" sizes="(min-width: 760px) 200px, 60vw">
+        <img class="author-photo" src="/images/ian-trimble-480.jpg" srcset="/images/ian-trimble-480.jpg 480w, /images/ian-trimble-960.jpg 960w" sizes="(min-width: 760px) 200px, 60vw" width="480" height="480" alt="Ian Trimble">
+      </picture>
+      <div>
+        <p class="section-kicker">The author</p>
+        <h2 id="author-title">Ian Trimble</h2>
+        <p>Ian Trimble is an Insider Threat Manager at Google, based in Baton Rouge, Louisiana. His conference sessions cover insider threats, AI for security operations teams, and taking an app from idea to the App Store with AI coding assistants. He writes suspense fiction about technology, starting with <em>Code Red</em> and the Max Mercer series.</p>
+        <ul class="proof">
+          <li>GIAC GSEC; CompTIA Security+, Network+ and Cloud+</li>
+          <li>Past President, ISACA Baton Rouge Chapter</li>
+          <li>Volunteer, NIST NCCoE Zero Trust community</li>
+        </ul>
+        <div class="actions" style="margin-top:16px">
+          <a class="button secondary" href="/about.html">About the author</a>
+          <a class="button linkish" href="https://www.amazon.com/stores/author/B0BRL7WV64">Amazon author page</a>
+        </div>
+      </div>
+    </div>
+  </div></section>
 
   <section><div class="wrap">
     <p class="section-kicker">Stories about the systems that shape us</p>
@@ -87,17 +172,9 @@
   <section id="books"><div class="wrap">
     <p class="section-kicker">Catalog</p>
     <h2>All titles</h2>
-    <div class="book-grid">
-      <article class="book-card">
-        <img class="cover" src="/code-red/cover.svg" alt="Code Red cover">
-        <span class="badge">Nonfiction</span>
-        <h3>Code Red</h3>
-        <p>The race to build and control artificial intelligence. Kindle $7.99 · paperback $18.99 · 356 pages · Kindle Unlimited.</p>
-        <div class="actions">
-          <a class="button primary" href="https://www.amazon.com/dp/B0GT23T3QN">Buy Kindle</a>
-          <a class="button linkish" href="/code-red/">Details</a>
-        </div>
-      </article>
+    <div class="series-row">
+      <div class="series-head"><h3 class="series-title">Max Mercer series</h3><p>Read in order: Book 1, 2, 3.</p><a class="button linkish" href="/max-mercer/">Series page</a></div>
+      <div class="book-grid">
       <article class="book-card">
         <img class="cover" src="/max-mercer/halcyon-key.svg" alt="The Halcyon Key cover">
         <span class="badge start">Book 1 · Start here</span>
@@ -129,6 +206,11 @@
           <a class="button linkish" href="/read/the-lazarus-directive/">Read a sample</a>
         </div>
       </article>
+      </div>
+    </div>
+    <div class="series-row">
+      <div class="series-head"><h3 class="series-title">Standalone novels</h3></div>
+      <div class="book-grid">
       <article class="book-card">
         <img class="cover" src="/the-unfiltered-future/cover.svg" alt="The Unfiltered Future cover">
         <span class="badge">Standalone · sample</span>
@@ -136,6 +218,30 @@
         <p>The AI doesn’t lie. That’s what makes it dangerous. Direct ebook $4.99 coming soon. Opening sample is live.</p>
         <div class="actions">
           <a class="button primary" href="/read/the-unfiltered-future/">Read the opening</a>
+        </div>
+      </article>
+      <article class="book-card">
+        <img class="cover" src="/dead-signal/assets/dead-signal-cover.svg" alt="Dead Signal cover">
+        <span class="badge">Thriller · coming soon</span>
+        <h3>Dead Signal</h3>
+        <p>1,200 passengers. No signal. No shore. A luxury-cruise survival thriller.</p>
+        <div class="actions">
+          <a class="button primary" href="/dead-signal/">Book page</a>
+        </div>
+      </article>
+      </div>
+    </div>
+    <div class="series-row">
+      <div class="series-head"><h3 class="series-title">Nonfiction and satire</h3></div>
+      <div class="book-grid">
+      <article class="book-card">
+        <img class="cover" src="/code-red/cover.svg" alt="Code Red cover">
+        <span class="badge">Nonfiction</span>
+        <h3>Code Red</h3>
+        <p>The race to build and control artificial intelligence. Kindle $7.99 · paperback $18.99 · 356 pages · Kindle Unlimited.</p>
+        <div class="actions">
+          <a class="button primary" href="https://www.amazon.com/dp/B0GT23T3QN">Buy Kindle</a>
+          <a class="button linkish" href="/code-red/">Details</a>
         </div>
       </article>
       <article class="book-card">
@@ -148,15 +254,6 @@
         </div>
       </article>
       <article class="book-card">
-        <img class="cover" src="/dead-signal/assets/dead-signal-cover.svg" alt="Dead Signal cover">
-        <span class="badge">Thriller · coming soon</span>
-        <h3>Dead Signal</h3>
-        <p>1,200 passengers. No signal. No shore. A luxury-cruise survival thriller.</p>
-        <div class="actions">
-          <a class="button primary" href="/dead-signal/">Book page</a>
-        </div>
-      </article>
-      <article class="book-card">
         <img class="cover" src="/gfn/cover.png" alt="Government Fucking Nonsense cover">
         <span class="badge">Satire · British politics</span>
         <h3>Government Fucking Nonsense</h3>
@@ -165,29 +262,10 @@
           <a class="button primary" href="/gfn/">Book page</a>
         </div>
       </article>
-    </div>
-  </div></section>
-
-  <section><div class="wrap">
-    <p class="section-kicker">The author</p>
-    <div class="author-block">
-      <div class="monogram" aria-hidden="true">IT</div>
-      <div>
-        <h2>Ian Trimble</h2>
-        <p>Ian Trimble writes about the systems that shape us: artificial intelligence, surveillance, power, and the people caught inside them. A veteran cyber instructor based in Louisiana, he is the author of <em>Code Red</em> and the Max Mercer series, set in the rain-soaked streets of Bay Enclave. Publisher: Remnant Security Group LLC.</p>
-        <div class="proof">
-          <span>Kindle Unlimited on Code Red and The Halcyon Key</span>
-          <span>Paperback and ebook</span>
-          <span>Max Mercer Book 1: Start here</span>
-          <span>356 pages · Code Red</span>
-        </div>
-        <div class="actions" style="margin-top:16px">
-          <a class="button secondary" href="/about.html">About the author</a>
-          <a class="button linkish" href="https://www.amazon.com/stores/author/B0BRL7WV64">Amazon author page</a>
-        </div>
       </div>
     </div>
   </div></section>
+
 
   <section class="email-strip"><div class="wrap">
     <p class="section-kicker">Chapter previews</p>
@@ -203,6 +281,7 @@
       <a href="/the-unfiltered-future/">Unfiltered Future</a>
       <a href="/about.html">About</a>
       <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
       <a href="/support.html">Support</a>
     </div>
     © 2026 Remnant Security Group LLC ·
